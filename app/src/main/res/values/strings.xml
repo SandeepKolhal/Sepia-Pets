@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sepia Pets</string>
+    <string name="error">Something goes wrong !!</string>
+    <string name="retry">Retry</string>
+    <string name="no_data_found">No Data Found!!</string>
+    <string name="pet_name">Pet Name :</string>
+    <string name="not_in_working_hour_msg">User not in working hours</string>
+    <string name="not_in_working_hour_error">Working hour error</string>
+    <string name="exit">EXIT</string>
+    <string name="pet_main_image">Pet Main Image</string>
+</resources>

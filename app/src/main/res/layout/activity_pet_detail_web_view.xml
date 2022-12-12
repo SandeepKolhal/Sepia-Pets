@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PetDetailWebView">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/closeWebView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="3dp"
+        android:gravity="center|end"
+        android:text="@string/pet_name"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/closeWebView"
+        app:layout_constraintEnd_toStartOf="@+id/petName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/closeWebView" />
+
+    <TextView
+        android:id="@+id/petName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center|start"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/closeWebView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/title"
+        app:layout_constraintTop_toTopOf="@+id/closeWebView"
+        tools:text="Cat" />
+
+    <View
+        android:id="@+id/topHorizontalView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grey_DEE4EF"
+        app:layout_constraintTop_toBottomOf="@+id/closeWebView" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomHorizontalView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topHorizontalView" />
+
+    <ProgressBar
+        android:id="@+id/webProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottomHorizontalView"
+        app:layout_constraintEnd_toEndOf="@+id/webView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topHorizontalView" />
+
+    <View
+        android:id="@+id/bottomHorizontalView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="65dp"
+        android:background="@color/grey_DEE4EF"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/foreword"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomHorizontalView"
+        app:srcCompat="@drawable/ic_right_arrow" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/refreshWebSite"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/foreword"
+        app:layout_constraintTop_toBottomOf="@+id/bottomHorizontalView"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/ic_refresh" />
+
+    <TextView
+        android:id="@+id/webTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/webUrl"
+        app:layout_constraintEnd_toStartOf="@+id/refreshWebSite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/backword"
+        app:layout_constraintTop_toBottomOf="@+id/bottomHorizontalView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/webUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:maxWidth="250dp"
+        app:drawableStartCompat="@drawable/ic_lock_filled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/refreshWebSite"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/backword"
+        app:layout_constraintTop_toBottomOf="@+id/webTitle"
+        tools:text="www.wikipidia.com" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backword"
+        android:layout_width="45dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomHorizontalView"
+        app:srcCompat="@drawable/ic_left_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
